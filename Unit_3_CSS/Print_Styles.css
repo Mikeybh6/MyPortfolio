@@ -1,0 +1,21 @@
+@charset "utf=8";
+
+@page {
+    size: 8.5in 11in;
+    margin: 1in;
+}
+
+html {
+    font-size: 12pt;
+    color: black;
+    transform: scale(90%);
+}
+
+h1 {
+    margin: 10px;
+}
+
+header,footer,.social-media-links {
+    display: none;
+}
+

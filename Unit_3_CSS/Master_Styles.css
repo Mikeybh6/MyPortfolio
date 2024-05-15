@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to left, #16bcf8, #38ff8b);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+nav {
+    width:100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: gray 10px 10px 10px;
+    font-family: "Mukta", sans-serif;
+    transform: scale(120%);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(174, 174, 174), 0 0 5px rgb(174, 174, 174);
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #666, #333);
+    border-radius: 10px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+a:hover:before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin: 80px 0;
+    text-transform: uppercase;
+    color: #333;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(174, 174, 174);
+}
+
+header .container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a#navicon {
+    display: none;
+}
+
+header nav ul li a {
+    color: white;
+    display: block;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
+
+.social-media a {
+    border: none;
+    box-shadow: none;
+    transform: scale(250%);
+    padding: 20px;
+    margin: 10px;
+}
+
+.social-media a:hover {
+    transform: scale(300%);
+}
+
+.social-media a:before {
+    display: inline-block;
+    position: absolute;
+    margin: 10px;
+    transition: none;
+    background: none;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;   
+}
+
+.social-media a:hover:before {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+@media only screen and (max-width: 640px) {
+
+    a#navicon {
+        display: block;
+        width: 100%;
+    }
+     
+    header nav {
+        padding: 20px;
+    }
+
+    header nav ul {
+        display: none;
+    }
+     
+    header nav ul li {
+        font-size: 1em;
+        line-height: 1.3em;
+        height: 1.3em;
+    }
+     
+    a#navicon:hover+ul, header nav ul:hover {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+
+    header nav ul {
+       display: flex;
+       flex-flow: row nowrap;
+       justify-content: space-evenly;
+    }
+    
+    header nav ul li {
+       flex: 0 1 auto;
+    }
+}
